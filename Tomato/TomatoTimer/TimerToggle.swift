@@ -61,7 +61,8 @@ struct ToggleTimerIntent: SetValueIntent {
     
     
     func perform() async throws -> some IntentResult {
-        TimerManager.shared.isRunning.toggle()
+      
+//        TimerManager.shared.isRunning.toggle()
         return .result()
     }
 }

@@ -19,6 +19,7 @@ struct CustomTimer: View {
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   
   var body: some View {
+    Spacer()
     VStack {
       let size: CGSize = .init(width: 80, height: 100)
       HStack {
@@ -37,19 +38,15 @@ struct CustomTimer: View {
       VStack(spacing: 20) {
         SetTimeButtonList()
         
-        TextField("타이머 시간을 입력해주세요.", text: $typpedTime)
-          .frame(maxWidth: .infinity, alignment: .center)
-          .padding()
-          .overlay {
-            RoundedRectangle(cornerRadius: 20)
-              .strokeBorder(.pink, lineWidth: 2)
-          }
-          .keyboardType(.numberPad)
-        
         Button(action: {
+          timeRemaining = 0
+          setTime(timeInSeconds: timeRemaining)
+          UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(0, forKey: "currentTime")
+          UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
           print(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start"))
+          print(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"))
         }) {
-          Text(isTimerRunning ? "Pause" : "Start")
+          Text("Reset")
             .padding()
             .background(isTimerRunning ? Color.red : Color.pink)
             .foregroundColor(.white)
@@ -68,7 +65,8 @@ struct CustomTimer: View {
     .onReceive(timer) { _ in
       UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(timeRemaining, forKey: "currentTime")
       isChanged = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start")
-      
+      print(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start"))
+      print(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"))
       if isTimerRunning && timeRemaining > 0 {
         timeRemaining -= 1
         setTime(timeInSeconds: timeRemaining)

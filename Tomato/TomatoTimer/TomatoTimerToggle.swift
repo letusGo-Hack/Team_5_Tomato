@@ -53,7 +53,7 @@ extension TomatoTimerToggle {
                 // 타이머가 진행중일 때
                 start = false
             }
-            
+            TimerManager.shared.isRunning = !start
             userDefaults?.set(start, forKey: "start")
             
             return start
