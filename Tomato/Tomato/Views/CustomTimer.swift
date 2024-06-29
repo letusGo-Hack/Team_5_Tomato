@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTimer: View {
-  @State var timeRemaining : Int = 60
+  @State var timeRemaining : Int = 0
   @State private var hours = 0
   @State private var minutes = 0
   @State private var seconds = 0
@@ -47,10 +47,7 @@ struct CustomTimer: View {
           .keyboardType(.numberPad)
         
         Button(action: {
-          if !isTimerRunning {
-            calcRemain()
-          }
-          isTimerRunning.toggle()
+          print(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start"))
         }) {
           Text(isTimerRunning ? "Pause" : "Start")
             .padding()
@@ -61,12 +58,18 @@ struct CustomTimer: View {
       }
     }
     .onReceive(timer) { _ in
+      UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(timeRemaining, forKey: "currentTime")
       print(timeRemaining)
-      guard let isActionButton = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "setTime") else { return }
-      print(isActionButton)
-      if (isActionButton || isTimerRunning) && (timeRemaining > 0) {
+      
+      if let isActionButton = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start") {
+        if isActionButton {
+          timeRemaining = 60
+        } else {
+          timeRemaining = 0
+        }
+      }
+      if timeRemaining > 0 {
         timeRemaining -= 1
-        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(timeRemaining, forKey: "currentTime")
         setTime(timeInSeconds: timeRemaining)
       }
     }

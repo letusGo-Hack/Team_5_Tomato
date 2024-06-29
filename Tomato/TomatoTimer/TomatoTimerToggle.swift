@@ -42,14 +42,13 @@ extension TomatoTimerToggle {
 
 
         func currentValue() async throws -> Bool {
-            if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"),
-               time > 0 {
-                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
-                return true
-            } else {
-                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
-                return false
-            }
+          if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"), time == 0 {
+            UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(true, forKey: "start")
+            return true
+          } else {
+            UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
+            return false
+          }
         }
     }
 }

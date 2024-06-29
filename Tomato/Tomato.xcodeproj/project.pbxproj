@@ -62,6 +62,7 @@
 		852B51042C2FA823008CF652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85ECAD792C2FCF4D00CAF379 /* TomatoTimerToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerToggle.swift; sourceTree = "<group>"; };
 		85ECAD7C2C2FD92700CAF379 /* SetTimeButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeButtonList.swift; sourceTree = "<group>"; };
+		890D39342C2FED100002B35C /* TomatoTimerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomatoTimerExtension.entitlements; sourceTree = "<group>"; };
 		89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TomatoTimerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +101,7 @@
 		852B50F12C2FA822008CF652 = {
 			isa = PBXGroup;
 			children = (
+				890D39342C2FED100002B35C /* TomatoTimerExtension.entitlements */,
 				852B50FC2C2FA822008CF652 /* Tomato */,
 				89B9E9812C2FC40F00B4A4F7 /* TomatoTimer */,
 				89B9E97C2C2FC40F00B4A4F7 /* Frameworks */,
@@ -500,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TomatoTimerExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68A8NDN495;
@@ -527,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TomatoTimerExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68A8NDN495;
