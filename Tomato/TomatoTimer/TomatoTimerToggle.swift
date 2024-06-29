@@ -28,7 +28,7 @@ struct TomatoTimerToggle: ControlWidget {
             )
             .tint(.purple)
         }
-        .displayName("타이머 🍅")
+        .displayName("\(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "setTime") ?? 0)")
         .description("Start and stop a productivity timer.")
     }
 }
