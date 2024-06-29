@@ -11,6 +11,8 @@
 		852B51002C2FA822008CF652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B50FF2C2FA822008CF652 /* ContentView.swift */; };
 		852B51022C2FA823008CF652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B51012C2FA823008CF652 /* Assets.xcassets */; };
 		852B51052C2FA823008CF652 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B51042C2FA823008CF652 /* Preview Assets.xcassets */; };
+		89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */; };
+		89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		852B50FF2C2FA822008CF652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		852B51012C2FA823008CF652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852B51042C2FA823008CF652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
+		89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				852B50FD2C2FA822008CF652 /* TomatoApp.swift */,
-				852B50FF2C2FA822008CF652 /* ContentView.swift */,
+				89B9E9752C2FBF1E00B4A4F7 /* Views */,
+				89B9E9762C2FBF2800B4A4F7 /* Animation */,
 				852B51012C2FA823008CF652 /* Assets.xcassets */,
 				852B51032C2FA823008CF652 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				852B51042C2FA823008CF652 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89B9E9752C2FBF1E00B4A4F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				852B50FF2C2FA822008CF652 /* ContentView.swift */,
+				89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89B9E9762C2FBF2800B4A4F7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				852B51002C2FA822008CF652 /* ContentView.swift in Sources */,
+				89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */,
 				852B50FE2C2FA822008CF652 /* TomatoApp.swift in Sources */,
+				89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 3K4KWAG7KD;
+				DEVELOPMENT_TEAM = 68A8NDN495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -301,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 3K4KWAG7KD;
+				DEVELOPMENT_TEAM = 68A8NDN495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
