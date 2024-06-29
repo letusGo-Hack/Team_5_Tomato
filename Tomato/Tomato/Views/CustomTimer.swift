@@ -62,8 +62,11 @@ struct CustomTimer: View {
     }
     .onReceive(timer) { _ in
       print(timeRemaining)
-      if isTimerRunning && timeRemaining > 0 {
+      guard let isActionButton = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "setTime") else { return }
+      print(isActionButton)
+      if (isActionButton || isTimerRunning) && (timeRemaining > 0) {
         timeRemaining -= 1
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(timeRemaining, forKey: "currentTime")
         setTime(timeInSeconds: timeRemaining)
       }
     }
