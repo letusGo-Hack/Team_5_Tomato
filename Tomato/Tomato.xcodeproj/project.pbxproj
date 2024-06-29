@@ -13,7 +13,40 @@
 		852B51052C2FA823008CF652 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B51042C2FA823008CF652 /* Preview Assets.xcassets */; };
 		89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */; };
 		89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */; };
+		89B9E97E2C2FC40F00B4A4F7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B9E97D2C2FC40F00B4A4F7 /* WidgetKit.framework */; };
+		89B9E9802C2FC40F00B4A4F7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B9E97F2C2FC40F00B4A4F7 /* SwiftUI.framework */; };
+		89B9E9832C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */; };
+		89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */; };
+		89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */; };
+		89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */; };
+		89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */; };
+		89B9E98D2C2FC41100B4A4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */; };
+		89B9E9912C2FC41100B4A4F7 /* TomatoTimerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89B9E98F2C2FC41100B4A4F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 852B50F22C2FA822008CF652 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89B9E97A2C2FC40F00B4A4F7;
+			remoteInfo = TomatoTimerExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89B9E9922C2FC41100B4A4F7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				89B9E9912C2FC41100B4A4F7 /* TomatoTimerExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		852B50FA2C2FA822008CF652 /* Tomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +56,16 @@
 		852B51042C2FA823008CF652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TomatoTimerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B9E97D2C2FC40F00B4A4F7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		89B9E97F2C2FC40F00B4A4F7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerLiveActivity.swift; sourceTree = "<group>"; };
+		89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerBundle.swift; sourceTree = "<group>"; };
+		89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerControl.swift; sourceTree = "<group>"; };
+		89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimer.swift; sourceTree = "<group>"; };
+		89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89B9E98E2C2FC41100B4A4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +76,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89B9E9782C2FC40F00B4A4F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B9E9802C2FC40F00B4A4F7 /* SwiftUI.framework in Frameworks */,
+				89B9E97E2C2FC40F00B4A4F7 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -40,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				852B50FC2C2FA822008CF652 /* Tomato */,
+				89B9E9812C2FC40F00B4A4F7 /* TomatoTimer */,
+				89B9E97C2C2FC40F00B4A4F7 /* Frameworks */,
 				852B50FB2C2FA822008CF652 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				852B50FA2C2FA822008CF652 /* Tomato.app */,
+				89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +144,29 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		89B9E97C2C2FC40F00B4A4F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89B9E97D2C2FC40F00B4A4F7 /* WidgetKit.framework */,
+				89B9E97F2C2FC40F00B4A4F7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89B9E9812C2FC40F00B4A4F7 /* TomatoTimer */ = {
+			isa = PBXGroup;
+			children = (
+				89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */,
+				89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */,
+				89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */,
+				89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */,
+				89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */,
+				89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */,
+				89B9E98E2C2FC41100B4A4F7 /* Info.plist */,
+			);
+			path = TomatoTimer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,15 +177,34 @@
 				852B50F62C2FA822008CF652 /* Sources */,
 				852B50F72C2FA822008CF652 /* Frameworks */,
 				852B50F82C2FA822008CF652 /* Resources */,
+				89B9E9922C2FC41100B4A4F7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				89B9E9902C2FC41100B4A4F7 /* PBXTargetDependency */,
 			);
 			name = Tomato;
 			productName = Tomato;
 			productReference = 852B50FA2C2FA822008CF652 /* Tomato.app */;
 			productType = "com.apple.product-type.application";
+		};
+		89B9E97A2C2FC40F00B4A4F7 /* TomatoTimerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B9E9952C2FC41100B4A4F7 /* Build configuration list for PBXNativeTarget "TomatoTimerExtension" */;
+			buildPhases = (
+				89B9E9772C2FC40F00B4A4F7 /* Sources */,
+				89B9E9782C2FC40F00B4A4F7 /* Frameworks */,
+				89B9E9792C2FC40F00B4A4F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TomatoTimerExtension;
+			productName = TomatoTimerExtension;
+			productReference = 89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -120,6 +217,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					852B50F92C2FA822008CF652 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					89B9E97A2C2FC40F00B4A4F7 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -138,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				852B50F92C2FA822008CF652 /* Tomato */,
+				89B9E97A2C2FC40F00B4A4F7 /* TomatoTimerExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +250,14 @@
 			files = (
 				852B51052C2FA823008CF652 /* Preview Assets.xcassets in Resources */,
 				852B51022C2FA823008CF652 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B9E9792C2FC40F00B4A4F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B9E98D2C2FC41100B4A4F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +275,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89B9E9772C2FC40F00B4A4F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B9E9832C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift in Sources */,
+				89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */,
+				89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */,
+				89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */,
+				89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89B9E9902C2FC41100B4A4F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89B9E97A2C2FC40F00B4A4F7 /* TomatoTimerExtension */;
+			targetProxy = 89B9E98F2C2FC41100B4A4F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		852B51062C2FA823008CF652 /* Debug */ = {
@@ -346,6 +475,60 @@
 			};
 			name = Release;
 		};
+		89B9E9932C2FC41100B4A4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68A8NDN495;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TomatoTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TomatoTimer;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letusgo.tomato.Tomato.TomatoTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89B9E9942C2FC41100B4A4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68A8NDN495;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TomatoTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TomatoTimer;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letusgo.tomato.Tomato.TomatoTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,6 +546,15 @@
 			buildConfigurations = (
 				852B51092C2FA823008CF652 /* Debug */,
 				852B510A2C2FA823008CF652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B9E9952C2FC41100B4A4F7 /* Build configuration list for PBXNativeTarget "TomatoTimerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B9E9932C2FC41100B4A4F7 /* Debug */,
+				89B9E9942C2FC41100B4A4F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
