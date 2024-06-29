@@ -17,13 +17,14 @@
 		89B9E9802C2FC40F00B4A4F7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B9E97F2C2FC40F00B4A4F7 /* SwiftUI.framework */; };
 		89B9E9832C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */; };
 		89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */; };
-		89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */; };
 		89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */; };
 		89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */; };
 		89B9E98D2C2FC41100B4A4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */; };
 		89B9E9912C2FC41100B4A4F7 /* TomatoTimerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CABFE78B2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */; };
-		CABFE78C2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */; };
+		CABFE7942C2FDA170068CCF3 /* TimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7932C2FDA170068CCF3 /* TimerToggle.swift */; };
+		CABFE7952C2FDA170068CCF3 /* TimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7932C2FDA170068CCF3 /* TimerToggle.swift */; };
+		CABFE79A2C2FEA780068CCF3 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7992C2FEA780068CCF3 /* TimeManager.swift */; };
+		CABFE79B2C2FEA780068CCF3 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7992C2FEA780068CCF3 /* TimeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +64,12 @@
 		89B9E97F2C2FC40F00B4A4F7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerLiveActivity.swift; sourceTree = "<group>"; };
 		89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerBundle.swift; sourceTree = "<group>"; };
-		89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerControl.swift; sourceTree = "<group>"; };
 		89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimer.swift; sourceTree = "<group>"; };
 		89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89B9E98E2C2FC41100B4A4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfomActionButton.swift; sourceTree = "<group>"; };
+		CABFE7932C2FDA170068CCF3 /* TimerToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerToggle.swift; sourceTree = "<group>"; };
+		CABFE7992C2FEA780068CCF3 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,11 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				89B9E9822C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift */,
+				CABFE7932C2FDA170068CCF3 /* TimerToggle.swift */,
 				89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */,
-				89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */,
 				89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */,
-				CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */,
 				89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */,
+				CABFE7992C2FEA780068CCF3 /* TimeManager.swift */,
 				89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */,
 				89B9E98E2C2FC41100B4A4F7 /* Info.plist */,
 			);
@@ -274,7 +275,8 @@
 			files = (
 				852B51002C2FA822008CF652 /* ContentView.swift in Sources */,
 				89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */,
-				CABFE78C2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
+				CABFE79B2C2FEA780068CCF3 /* TimeManager.swift in Sources */,
+				CABFE7952C2FDA170068CCF3 /* TimerToggle.swift in Sources */,
 				852B50FE2C2FA822008CF652 /* TomatoApp.swift in Sources */,
 				89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */,
 			);
@@ -286,9 +288,9 @@
 			files = (
 				89B9E9832C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift in Sources */,
 				89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */,
-				CABFE78B2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
+				CABFE79A2C2FEA780068CCF3 /* TimeManager.swift in Sources */,
 				89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */,
-				89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */,
+				CABFE7942C2FDA170068CCF3 /* TimerToggle.swift in Sources */,
 				89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 68A8NDN495;
+				DEVELOPMENT_TEAM = WBG9V97XP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -460,7 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 68A8NDN495;
+				DEVELOPMENT_TEAM = WBG9V97XP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -488,7 +490,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68A8NDN495;
+				DEVELOPMENT_TEAM = WBG9V97XP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TomatoTimer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TomatoTimer;
@@ -515,7 +517,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68A8NDN495;
+				DEVELOPMENT_TEAM = WBG9V97XP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TomatoTimer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TomatoTimer;
