@@ -35,6 +35,8 @@ struct CustomTimer: View {
       Spacer()
       
       VStack(spacing: 20) {
+        SetTimeButtonList()
+        
         TextField("타이머 시간을 입력해주세요.", text: $typpedTime)
           .frame(maxWidth: .infinity, alignment: .center)
           .padding()

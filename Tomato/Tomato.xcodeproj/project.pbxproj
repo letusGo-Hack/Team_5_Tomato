@@ -11,6 +11,7 @@
 		852B51002C2FA822008CF652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B50FF2C2FA822008CF652 /* ContentView.swift */; };
 		852B51022C2FA823008CF652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B51012C2FA823008CF652 /* Assets.xcassets */; };
 		852B51052C2FA823008CF652 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B51042C2FA823008CF652 /* Preview Assets.xcassets */; };
+		892AC0772C2FD2C6007005D9 /* SetTimeButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892AC0762C2FD2C6007005D9 /* SetTimeButtonList.swift */; };
 		89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */; };
 		89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */; };
 		89B9E97E2C2FC40F00B4A4F7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B9E97D2C2FC40F00B4A4F7 /* WidgetKit.framework */; };
@@ -56,6 +57,8 @@
 		852B50FF2C2FA822008CF652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		852B51012C2FA823008CF652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852B51042C2FA823008CF652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		892AC0762C2FD2C6007005D9 /* SetTimeButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeButtonList.swift; sourceTree = "<group>"; };
+		892AC0782C2FD496007005D9 /* Tomato.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tomato.entitlements; sourceTree = "<group>"; };
 		89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TomatoTimerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +116,7 @@
 		852B50FC2C2FA822008CF652 /* Tomato */ = {
 			isa = PBXGroup;
 			children = (
+				892AC0782C2FD496007005D9 /* Tomato.entitlements */,
 				852B50FD2C2FA822008CF652 /* TomatoApp.swift */,
 				89B9E9752C2FBF1E00B4A4F7 /* Views */,
 				89B9E9762C2FBF2800B4A4F7 /* Animation */,
@@ -135,6 +139,7 @@
 			children = (
 				852B50FF2C2FA822008CF652 /* ContentView.swift */,
 				89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */,
+				892AC0762C2FD2C6007005D9 /* SetTimeButtonList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				CABFE78C2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
 				852B50FE2C2FA822008CF652 /* TomatoApp.swift in Sources */,
 				89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */,
+				892AC0772C2FD2C6007005D9 /* SetTimeButtonList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tomato/Tomato.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
@@ -457,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tomato/Tomato.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato/Preview Content\"";
