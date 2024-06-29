@@ -23,12 +23,12 @@ struct TomatoTimerToggle: ControlWidget {
                 isOn: value,
                 action: ToggleTimerIntent(),
                 valueLabel: { isOn in
-                    Label(isOn ? "시작!" : "멈춤", systemImage: "timer")
+                    Label(isOn ? "시작" : "정지", systemImage: "timer")
                 }
             )
-            .tint(.purple)
+            .tint(.pink)
         }
-        .displayName("타이머")
+        .displayName("타이머 시작/정지")
         .description("Start and stop a productivity timer.")
     }
 }
@@ -42,13 +42,16 @@ extension TomatoTimerToggle {
 
 
         func currentValue() async throws -> Bool {
-          if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"), time == 0 {
-            UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(true, forKey: "start")
-            return true
-          } else {
-            UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
-            return false
-          }
+            if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"),
+                time == 0 {
+                // 타이머가 끝났을 때
+                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(true, forKey: "start")
+                return true
+            } else {
+                // 타이머가 진행중일 때
+                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
+                return false
+            }
         }
     }
 }
