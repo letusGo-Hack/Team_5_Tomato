@@ -11,7 +11,7 @@ struct SetTimeButtonList: View {
   var body: some View {
     HStack {
       Button {
-        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(15, forKey: "setTime")
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(900, forKey: "setTime")
         print(("\(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "setTime") ?? 0)"))
       } label: {
         Text("15min")
@@ -22,7 +22,7 @@ struct SetTimeButtonList: View {
       }
       
       Button {
-        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(30, forKey: "setTime")
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(1800, forKey: "setTime")
         UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "setTime")
 
       } label: {
@@ -34,7 +34,7 @@ struct SetTimeButtonList: View {
       }
       
       Button {
-        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(45, forKey: "setTime")
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(2700, forKey: "setTime")
       } label: {
         Text("45min")
           .foregroundStyle(.white)
@@ -44,7 +44,7 @@ struct SetTimeButtonList: View {
       }
       
       Button {
-        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(60, forKey: "setTime")
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(3600, forKey: "setTime")
       } label: {
         Text("60min")
           .foregroundStyle(.white)

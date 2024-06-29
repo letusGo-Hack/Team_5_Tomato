@@ -14,7 +14,7 @@ struct CustomTimer: View {
   @State private var seconds = 0
   @State private var typpedTime: String = ""
   @State var isTimerRunning = false
-  
+  @State var isChanged: Bool? = false
   let date = Date()
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   
@@ -57,20 +57,23 @@ struct CustomTimer: View {
         }
       }
     }
+    .onChange(of: isChanged) {
+      if let isChanged, isChanged {
+        timeRemaining = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "setTime") ?? 0
+        isTimerRunning = true
+      } else {
+        isTimerRunning = false
+      }
+    }
     .onReceive(timer) { _ in
       UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(timeRemaining, forKey: "currentTime")
-      print(timeRemaining)
+      isChanged = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start")
       
-      if let isActionButton = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.bool(forKey: "start") {
-        if isActionButton {
-          timeRemaining = 60
-        } else {
-          timeRemaining = 0
-        }
-      }
-      if timeRemaining > 0 {
+      if isTimerRunning && timeRemaining > 0 {
         timeRemaining -= 1
         setTime(timeInSeconds: timeRemaining)
+      } else if timeRemaining == 0 {
+        UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
       }
     }
   }
