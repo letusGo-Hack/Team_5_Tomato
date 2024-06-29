@@ -52,7 +52,7 @@ extension TomatoTimerControl {
 struct TimerConfiguration: ControlConfigurationIntent {
     static var title: LocalizedStringResource { "Timer Name Configuration" }
 
-    @Parameter(title: "Timer Name")
+    @Parameter(title: "Timer Name", default: "default Timer")
     var timerName: String
 }
 

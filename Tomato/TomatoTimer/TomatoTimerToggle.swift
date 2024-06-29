@@ -28,7 +28,7 @@ struct TomatoTimerToggle: ControlWidget {
             )
             .tint(.purple)
         }
-        .displayName("\(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "setTime") ?? 0)")
+        .displayName("타이머")
         .description("Start and stop a productivity timer.")
     }
 }
@@ -42,8 +42,14 @@ extension TomatoTimerToggle {
 
 
         func currentValue() async throws -> Bool {
-            let isRunning = false // Check if the timer is running
-            return isRunning
+            if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"),
+               time > 0 {
+                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
+                return true
+            } else {
+                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
+                return false
+            }
         }
     }
 }
