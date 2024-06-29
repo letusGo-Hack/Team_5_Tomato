@@ -9,48 +9,73 @@ import SwiftUI
 
 struct CustomTimer: View {
   @State var timeRemaining : Int = 60
+  @State private var hours = 0
+  @State private var minutes = 0
+  @State private var seconds = 0
+  @State private var typpedTime: String = ""
   @State var isTimerRunning = false
+  
   let date = Date()
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   
   var body: some View {
     VStack {
-      let size: CGSize = .init(width: 100, height: 120)
-      FlipClockTextEffect(value: $timeRemaining, size: size, fontSize: 60, cornerRadius: 18, foreground: .white, background: .pink)
-        .onReceive(timer) { _ in
-          print(timeRemaining)
-          if isTimerRunning && timeRemaining > 0 {
-            timeRemaining -= 1
-          }
-        }
+      let size: CGSize = .init(width: 80, height: 100)
+      HStack {
+        FlipClockTextEffect(value: $hours, size: size, fontSize: 40, cornerRadius: 18, foreground: .white, background: .pink)
+        Text(":")
+          .font(.system(size: 50, weight: .bold))
+        FlipClockTextEffect(value: $minutes, size: size, fontSize: 40, cornerRadius: 18, foreground: .white, background: .pink)
+        Text(":")
+          .font(.system(size: 50, weight: .bold))
+        FlipClockTextEffect(value: $seconds, size: size, fontSize: 40, cornerRadius: 18, foreground: .white, background: .pink)
+      }
+      .padding(.top, 50)
       
-      Button(action: {
-        isTimerRunning.toggle()
-      }) {
-        Text(isTimerRunning ? "Pause" : "Start")
+      Spacer()
+      
+      VStack(spacing: 20) {
+        TextField("타이머 시간을 입력해주세요.", text: $typpedTime)
+          .frame(maxWidth: .infinity, alignment: .center)
           .padding()
-          .background(isTimerRunning ? Color.red : Color.green)
-          .foregroundColor(.white)
-          .cornerRadius(10)
+          .overlay {
+            RoundedRectangle(cornerRadius: 20)
+              .strokeBorder(.pink, lineWidth: 2)
+          }
+          .keyboardType(.numberPad)
+        
+        Button(action: {
+          if !isTimerRunning {
+            calcRemain()
+          }
+          isTimerRunning.toggle()
+        }) {
+          Text(isTimerRunning ? "Pause" : "Start")
+            .padding()
+            .background(isTimerRunning ? Color.red : Color.pink)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
       }
     }
-    .onAppear {
-      calcRemain()
+    .onReceive(timer) { _ in
+      print(timeRemaining)
+      if isTimerRunning && timeRemaining > 0 {
+        timeRemaining -= 1
+        setTime(timeInSeconds: timeRemaining)
+      }
     }
   }
-}
-
-extension CustomTimer {
-  func convertSecondsToTime(timeInSeconds: Int) -> String {
-    let hours = timeInSeconds / 3600
-    let minutes = (timeInSeconds - hours * 3600) / 60
-    let seconds = timeInSeconds % 60
-    return String(format: "%02i:%02i:%02i", hours,minutes,seconds)
+  
+  func setTime(timeInSeconds: Int) {
+    hours = timeInSeconds / 3600
+    minutes = (timeInSeconds - hours * 3600) / 60
+    seconds = timeInSeconds % 60
   }
   
   func calcRemain() {
     let calendar = Calendar.current
-    let targetTime : Date = calendar.date(byAdding: .second, value: 3810, to: date, wrappingComponents: false) ?? Date()
+    let targetTime : Date = calendar.date(byAdding: .second, value: Int(typpedTime) ?? 0, to: date, wrappingComponents: false) ?? Date()
     let remainSeconds = Int(targetTime.timeIntervalSince(date))
     self.timeRemaining = remainSeconds
   }
