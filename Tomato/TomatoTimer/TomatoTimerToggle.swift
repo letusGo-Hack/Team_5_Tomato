@@ -23,7 +23,7 @@ struct TomatoTimerToggle: ControlWidget {
                 isOn: TimerManager.shared.isRunning,
                 action: ToggleTimerIntent(),
                 valueLabel: { isOn in
-                    Label(isOn ? "시작" : "정지", systemImage: "timer")
+                    Label(isOn ? "시작" : "정지", image: "tomato-control-3")
                 }
             )
             .tint(.pink)

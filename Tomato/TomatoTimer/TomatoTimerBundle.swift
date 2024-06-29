@@ -14,7 +14,7 @@ struct TomatoTimerBundle: WidgetBundle {
 //        TomatoTimer()
 //        TomatoTimerControl()
 //        PerformActionButton()
-//        TomatoTimerLiveActivity()
+        TomatoTimerLiveActivity()
         TomatoTimerToggle()
     }
 }

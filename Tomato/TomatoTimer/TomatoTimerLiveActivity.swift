@@ -8,27 +8,61 @@
 import ActivityKit
 import WidgetKit
 import SwiftUI
+import ActivityKit
+import WidgetKit
+import SwiftUI
 
 struct TomatoTimerAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var emoji: String
+        var startTime: Date
     }
 
     // Fixed non-changing properties about your activity go here!
-    var name: String
+    var duration: Double = 60 * 30
 }
 
 struct TomatoTimerLiveActivity: Widget {
+    @State var timePassed: Double = 0
+    @State var isShowing: Bool = true
+    @State var timeText = ""
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: TomatoTimerAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello \(context.state.emoji)")
+          Group {
+            if (isShowing) {
+              VStack {
+                HStack{
+                  Text("🍅")
+                  Text("\(timeText)").padding()
+                }
+                Text("\(Int(timePassed)) seconds passed").padding()
+              }
+              .activityBackgroundTint(Color.cyan)
+              .activitySystemActionForegroundColor(Color.black)
+              .onReceive(timer) { _ in
+                timePassed = timePassed + 1
+                if (timePassed > context.attributes.duration) {
+                  isShowing = false
+                }
+              }
+            } else {
+              VStack {
+                HStack{
+                  Text("🍅🍅🍅🍅🍅🍅🍅")
+                  Text("time is running out").padding()
+                }
+                Text("DONE").padding()
+              }
+              .activityBackgroundTint(Color.cyan)
+              .activitySystemActionForegroundColor(Color.black)
             }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-
+          }
+          .onChange(of: (UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"))) {
+            timeText = String(UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime") ?? 0)
+          }
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
@@ -40,15 +74,15 @@ struct TomatoTimerLiveActivity: Widget {
                     Text("Trailing")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
+//                    Text("Bottom \(context.state.emoji)")
                     // more content
                 }
             } compactLeading: {
                 Text("L")
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+//                Text("T \(context.state.emoji)")
             } minimal: {
-                Text(context.state.emoji)
+//                Text(context.state.emoji)
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -56,19 +90,39 @@ struct TomatoTimerLiveActivity: Widget {
     }
 }
 
+func requestLiveActivity(duration: Double) {
+    let currentTime = Date()
+    let timerAttribute = TomatoTimerAttributes(duration: duration)
+    let initialState = TomatoTimerAttributes.ContentState(startTime: currentTime)
+    let content = ActivityContent(state: initialState, staleDate: nil, relevanceScore: 0.0)
+    do {
+        let activity = try Activity.request(
+            attributes: timerAttribute,
+            content: content,
+            pushType: nil
+        )
+    } catch {
+        print("Can not request Live Activity.")
+    }
+}
+
+func updateLiveActivity() {
+    //update timePassed
+}
+
 extension TomatoTimerAttributes {
     fileprivate static var preview: TomatoTimerAttributes {
-        TomatoTimerAttributes(name: "World")
+        TomatoTimerAttributes(duration: 60*30)
     }
 }
 
 extension TomatoTimerAttributes.ContentState {
     fileprivate static var smiley: TomatoTimerAttributes.ContentState {
-        TomatoTimerAttributes.ContentState(emoji: "😀")
+        TomatoTimerAttributes.ContentState(startTime: Date())
      }
      
      fileprivate static var starEyes: TomatoTimerAttributes.ContentState {
-         TomatoTimerAttributes.ContentState(emoji: "🤩")
+         TomatoTimerAttributes.ContentState(startTime: Date())
      }
 }
 
