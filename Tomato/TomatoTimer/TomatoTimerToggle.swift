@@ -20,7 +20,7 @@ struct TomatoTimerToggle: ControlWidget {
         ) { value in
             ControlWidgetToggle(
                 "타이머 🍅",
-                isOn: value,
+                isOn: TimerManager.shared.isRunning,
                 action: ToggleTimerIntent(),
                 valueLabel: { isOn in
                     Label(isOn ? "시작" : "정지", systemImage: "timer")
@@ -62,16 +62,16 @@ extension TomatoTimerToggle {
 }
 
 
-struct ToggleTimerIntent: SetValueIntent {
-    static var title: LocalizedStringResource = "타이머 🍅"
-
-
-    @Parameter(title: "Timer is running")
-    var value: Bool
-
-
-    func perform() async throws -> some IntentResult {
-        // Start / stop the timer based on `value`.
-        return .result()
-    }
-}
+//struct ToggleTimerIntent: SetValueIntent {
+//    static var title: LocalizedStringResource = "타이머 🍅"
+//
+//
+//    @Parameter(title: "Timer is running")
+//    var value: Bool
+//
+//
+//    func perform() async throws -> some IntentResult {
+//        // Start / stop the timer based on `value`.
+//        return .result()
+//    }
+//}

@@ -11,10 +11,10 @@ import SwiftUI
 @main
 struct TomatoTimerBundle: WidgetBundle {
     var body: some Widget {
-        TomatoTimer()
-        TomatoTimerControl()
-        PerformActionButton()
-        TomatoTimerLiveActivity()
+//        TomatoTimer()
+//        TomatoTimerControl()
+//        PerformActionButton()
+//        TomatoTimerLiveActivity()
         TomatoTimerToggle()
     }
 }

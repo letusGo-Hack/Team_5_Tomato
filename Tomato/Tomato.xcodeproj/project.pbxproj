@@ -14,6 +14,10 @@
 		85ECAD7A2C2FCF4D00CAF379 /* TomatoTimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD792C2FCF4D00CAF379 /* TomatoTimerToggle.swift */; };
 		85ECAD7B2C2FCF4D00CAF379 /* TomatoTimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD792C2FCF4D00CAF379 /* TomatoTimerToggle.swift */; };
 		85ECAD7D2C2FD92700CAF379 /* SetTimeButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD7C2C2FD92700CAF379 /* SetTimeButtonList.swift */; };
+		85ECAD802C3001A900CAF379 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD7E2C3001A900CAF379 /* TimeManager.swift */; };
+		85ECAD812C3001A900CAF379 /* TimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD7F2C3001A900CAF379 /* TimerToggle.swift */; };
+		85ECAD822C30021600CAF379 /* TimerToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD7F2C3001A900CAF379 /* TimerToggle.swift */; };
+		85ECAD832C30021C00CAF379 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECAD7E2C3001A900CAF379 /* TimeManager.swift */; };
 		892AC0772C2FD2C6007005D9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */; };
 		89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */; };
@@ -62,6 +66,8 @@
 		852B51042C2FA823008CF652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85ECAD792C2FCF4D00CAF379 /* TomatoTimerToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimerToggle.swift; sourceTree = "<group>"; };
 		85ECAD7C2C2FD92700CAF379 /* SetTimeButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeButtonList.swift; sourceTree = "<group>"; };
+		85ECAD7E2C3001A900CAF379 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		85ECAD7F2C3001A900CAF379 /* TimerToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerToggle.swift; sourceTree = "<group>"; };
 		890D39342C2FED100002B35C /* TomatoTimerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomatoTimerExtension.entitlements; sourceTree = "<group>"; };
 		89B9E96D2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		89B9E9732C2FBE8200B4A4F7 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */,
 				CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */,
 				89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */,
+				85ECAD7E2C3001A900CAF379 /* TimeManager.swift */,
+				85ECAD7F2C3001A900CAF379 /* TimerToggle.swift */,
 				89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */,
 				89B9E98E2C2FC41100B4A4F7 /* Info.plist */,
 				85ECAD792C2FCF4D00CAF379 /* TomatoTimerToggle.swift */,
@@ -288,7 +296,9 @@
 				85ECAD7B2C2FCF4D00CAF379 /* TomatoTimerToggle.swift in Sources */,
 				852B50FE2C2FA822008CF652 /* TomatoApp.swift in Sources */,
 				85ECAD7D2C2FD92700CAF379 /* SetTimeButtonList.swift in Sources */,
+				85ECAD822C30021600CAF379 /* TimerToggle.swift in Sources */,
 				89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */,
+				85ECAD832C30021C00CAF379 /* TimeManager.swift in Sources */,
 				892AC0772C2FD2C6007005D9 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +312,8 @@
 				89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */,
 				CABFE78B2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
 				89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */,
+				85ECAD802C3001A900CAF379 /* TimeManager.swift in Sources */,
+				85ECAD812C3001A900CAF379 /* TimerToggle.swift in Sources */,
 				89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */,
 				89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */,
 			);
