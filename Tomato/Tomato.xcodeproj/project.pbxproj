@@ -22,6 +22,8 @@
 		89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */; };
 		89B9E98D2C2FC41100B4A4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */; };
 		89B9E9912C2FC41100B4A4F7 /* TomatoTimerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 89B9E97B2C2FC40F00B4A4F7 /* TomatoTimerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CABFE78B2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */; };
+		CABFE78C2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89B9E98E2C2FC41100B4A4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfomActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,7 @@
 				89B9E9842C2FC40F00B4A4F7 /* TomatoTimerBundle.swift */,
 				89B9E9862C2FC40F00B4A4F7 /* TomatoTimerControl.swift */,
 				89B9E9882C2FC40F00B4A4F7 /* TomatoTimer.swift */,
+				CABFE78A2C2FCE010068CCF3 /* PerfomActionButton.swift */,
 				89B9E98A2C2FC40F00B4A4F7 /* AppIntent.swift */,
 				89B9E98C2C2FC41100B4A4F7 /* Assets.xcassets */,
 				89B9E98E2C2FC41100B4A4F7 /* Info.plist */,
@@ -270,6 +274,7 @@
 			files = (
 				852B51002C2FA822008CF652 /* ContentView.swift in Sources */,
 				89B9E96E2C2FAC7600B4A4F7 /* FlipClockTextEffect.swift in Sources */,
+				CABFE78C2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
 				852B50FE2C2FA822008CF652 /* TomatoApp.swift in Sources */,
 				89B9E9742C2FBE8200B4A4F7 /* CustomTimer.swift in Sources */,
 			);
@@ -281,6 +286,7 @@
 			files = (
 				89B9E9832C2FC40F00B4A4F7 /* TomatoTimerLiveActivity.swift in Sources */,
 				89B9E9892C2FC40F00B4A4F7 /* TomatoTimer.swift in Sources */,
+				CABFE78B2C2FCE010068CCF3 /* PerfomActionButton.swift in Sources */,
 				89B9E98B2C2FC40F00B4A4F7 /* AppIntent.swift in Sources */,
 				89B9E9872C2FC40F00B4A4F7 /* TomatoTimerControl.swift in Sources */,
 				89B9E9852C2FC40F00B4A4F7 /* TomatoTimerBundle.swift in Sources */,

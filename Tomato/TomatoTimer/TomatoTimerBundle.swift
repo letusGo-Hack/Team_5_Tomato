@@ -13,6 +13,7 @@ struct TomatoTimerBundle: WidgetBundle {
     var body: some Widget {
         TomatoTimer()
         TomatoTimerControl()
+        PerformActionButton()
         TomatoTimerLiveActivity()
     }
 }
