@@ -42,16 +42,21 @@ extension TomatoTimerToggle {
 
 
         func currentValue() async throws -> Bool {
+            let userDefaults = UserDefaults(suiteName: "group.letusgo.tomatoGroup")
+            var start = false
+            
             if let time = UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.integer(forKey: "currentTime"),
                 time == 0 {
                 // 타이머가 끝났을 때
-                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(true, forKey: "start")
-                return true
+                start = true
             } else {
                 // 타이머가 진행중일 때
-                UserDefaults(suiteName: "group.letusgo.tomatoGroup")?.set(false, forKey: "start")
-                return false
+                start = false
             }
+            
+            userDefaults?.set(start, forKey: "start")
+            
+            return start
         }
     }
 }
